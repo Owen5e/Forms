@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.wrapper {
+  position: relative;
+  width: 450px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px #0ef;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.wrapper:hover {
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.formwrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+
+.wrapper.active .formwrapper.signIn {
+  transform: translateY(-450px);
+}
+
+.wrapper .formwrapper.signUp {
+  position: absolute;
+  top: 450px;
+  left: 0;
+}
+.wrapper.active .formwrapper.signup {
+  transform: translateY(-450px);
+}
+
+.wrapper h2 {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.input-group {
+  position: relative;
+  margin: 30px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+}
+
+.input-group input {
+  width: 320px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0 5px;
+  transition: 0.5s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -5px;
+}
+
+.remember {
+  margin: 0px 0px 15px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.remember label {
+  font-size: 16px;
+  color: #fff;
+}
+
+.remember label input {
+  accent-color: #0ef;
+  width: 12px;
+  height: 12px;
+}
+
+button {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: #0ef;
+  box-shadow: 0 0 10px #fff;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  font-family: Inter;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.signupLink {
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.signupLink p {
+  color: #fff;
+}
+
+.signupLink p a {
+  color: #0ef;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signupLink p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  /* Your styles for small screens go here */
+  .wrapper {
+    margin-inline: 10px;
+  }
+}

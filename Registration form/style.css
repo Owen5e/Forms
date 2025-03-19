@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #11b5e4, #011936);
+}
+.container {
+  padding: 20px 30px;
+  border: 1px solid #ccc;
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff8f0;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.container .title {
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+  margin: 10px 0;
+}
+
+.container .title::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(135deg, #11b5e4, #011936);
+  height: 3px;
+  width: 28px;
+  left: 0;
+  bottom: 0;
+}
+
+form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .user-details .input-box {
+  margin-bottom: 10px;
+  width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .detail {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: none;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #011936;
+}
+
+form .category {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.category label {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.gender-details .gender-label {
+  padding-top: 10px;
+}
+
+form .category .dot {
+  width: 18px;
+  height: 18px;
+  margin-right: 3px;
+  background: #d9d9d9;
+  border-radius: 50px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  border-color: #d9d9d9;
+  background: #000;
+}
+
+.gender-details input[type="radio"] {
+  display: none;
+}
+
+.submit button {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 40px;
+  width: 100%;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #11b5e4, #011936);
+  color: #d9d9d9;
+  cursor: pointer;
+}
+
+.submit button:hover {
+  background: linear-gradient(-135deg, #11b5e4, #011936);
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+    margin: 10px;
+  }
+  form .user-details .input-box {
+    width: 100%;
+  }
+  form .category {
+    width: 100%;
+  }
+  form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 0;
+  }
+}

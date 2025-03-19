@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "helvetica";
+  background-image: url(bg-img.jpg);
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper {
+  position: absolute;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  width: 300px;
+  height: 500px;
+  box-shadow: 2px 2px 50px #000;
+  padding: 30px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.formwrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+
+.wrapper.active .formwrapper.signin {
+  transform: translateY(-500px);
+}
+
+.wrapper .formwrapper.signup {
+  position: absolute;
+  padding: 30px;
+  top: 450px;
+  left: 0px;
+  margin-top: 20px;
+}
+
+.wrapper.active .formwrapper.signup {
+  transform: translateY(-480px);
+}
+
+.formwrapper header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.field {
+  position: relative;
+  margin: 0 0 15px 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+
+.field i {
+  padding-bottom: 3px;
+}
+
+.field input {
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0 0 0 5px;
+}
+
+.link {
+  margin: 0 0 15px 5px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.signup .link label {
+  display: flex;
+}
+
+.link .forgot {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+.forgot:hover {
+  text-decoration: underline;
+}
+#myCheckBox {
+  accent-color: #0ef;
+}
+.submit button {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: #0ef;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.submit button:hover {
+  background: rgb(36, 111, 134);
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+
+.field button {
+  position: relative;
+  color: #fff;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.text {
+  color: #fff;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.field .facebook {
+  background-color: rgb(0, 4, 255);
+}
+
+.field .instagram {
+  background-color: rgb(225, 0, 255);
+}
+
+.signLink {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.signLink p a {
+  text-decoration: none;
+  color: #0ef;
+}
+
+.signLink p a:hover {
+  text-decoration: underline;
+}
